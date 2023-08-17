@@ -40,6 +40,9 @@ header {
 
 .hero-section {
   padding: 100px 0;
+}
+
+.center-items {
   text-align: center;
 }
 
@@ -57,8 +60,37 @@ header {
 .img-fluid {
   max-width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.image-container {
+  position: relative;
+  width: 197px;
+  height: 200px;
+  overflow: hidden;
+  margin: 20px;
+
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
+
+}
+
+.image {
+  position: absolute;
+
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-in-out;
+  text-align: start !important;
+
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out
+}
+
+.image:hover {
+  transform: scale(1.2);
+  filter: none;
+  -webkit-filter: grayscale(0);
 }
 
 .img-fluid:hover {
@@ -119,15 +151,27 @@ header {
   cursor: pointer;
 }
 
-
 .hero-section p,
 .section-content {
   color: #554848;
 }
 
-
 .hero-section {
-  background-color: #eaeef2;
+  background-image: url('img/playa.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.section-header {
+  background-color: #1c1b1b70;
+  border-radius: 16px;
+}
+
+.paragraph-header {
+  background-color: #1c1b1b70;
+  border-radius: 16px;
+  color: white !important;
 }
 
 .about-section {
@@ -282,6 +326,10 @@ input[type="checkbox"]:checked+.slider:before {
 
 .leading-paragraph {
   font-size: 1.5rem;
+}
+
+.lead {
+  height: 61.4333px;
 }
 
 /* Footer Styles */

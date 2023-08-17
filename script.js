@@ -41,4 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     localStorage.setItem("darkMode", darkModeToggle.checked);
   });
+
+  const textElement = document.getElementById("text");
+  const text = textElement.textContent.trim();
+
+  textElement.textContent = "";
+
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < text.length) {
+      textElement.textContent += text.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 50);
+    }
+  }
+
+  type();
 });
