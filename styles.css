@@ -167,6 +167,7 @@ header {
 .section-header {
   background-color: #1c1b1b70;
   border-radius: 16px;
+  color: white !important;
 }
 
 .paragraph-header {
