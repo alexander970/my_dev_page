@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  var darkmode = false; 
+
   const darkModeToggle = document.getElementById("darkModeToggle");
   const navbar = document.getElementsByClassName("navbar")[0];
   const footer = document.getElementsByClassName("footer-section")[0];
@@ -9,10 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the initial mode based on user preference or stored value
   document.body.classList.toggle("dark-mode", storedDarkMode ?? prefersDarkMode);
-  darkModeToggle.checked = storedDarkMode ?? prefersDarkMode;
+  darkmode = storedDarkMode ?? prefersDarkMode;
 
   function toggleDarkModeStyles() {
-    if (darkModeToggle.checked === true) {
+    if (darkmode === true) {
+      darkModeToggle.classList.remove("bi-moon-fill");
+      darkModeToggle.classList.add("bi-brightness-high-fill");
+      
       navbar.classList.remove('navbar-light');
       navbar.classList.remove('bg-light');
       navbar.classList.add('navbar-dark');
@@ -21,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
       footer.classList.remove('bg-light');
       footer.classList.add('bg-dark');
     } else {
+      darkModeToggle.classList.remove("bi-brightness-high-fill");
+      darkModeToggle.classList.add("bi-moon-fill");
+
       navbar.classList.remove('navbar-dark');
       navbar.classList.remove('bg-dark');
       navbar.classList.add('navbar-light');
@@ -34,12 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleDarkModeStyles();
 
   // Listen for changes to the dark mode switch and update the mode
-  darkModeToggle.addEventListener("change", () => {
+  darkModeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+
+    darkmode = !darkmode;
 
     toggleDarkModeStyles();
 
-    localStorage.setItem("darkMode", darkModeToggle.checked);
+    localStorage.setItem("darkMode", darkmode);
   });
 
   const textElement = document.getElementById("text");

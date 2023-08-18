@@ -320,6 +320,17 @@ input[type="checkbox"]:checked+.slider {
 
 input[type="checkbox"]:checked+.slider:before {
   transform: translateX(25px);
+  content: "\f3cc"; /* Unicode for filled moon icon */
+}
+
+#darkModeToggle {
+  color: rgb(85, 84, 84);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body.dark-mode #darkModeToggle {
+  color: rgb(214, 224, 68);
 }
 
 .section-content {
@@ -365,5 +376,9 @@ input[type="checkbox"]:checked+.slider:before {
   .section-divider {
     height: 100px;
     background-position: 350px 230px;
+  }
+  #darkModeToggle
+  {
+    font-size: 32px;
   }
 }
