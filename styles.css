@@ -88,14 +88,14 @@ header {
 }
 
 .image:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   filter: none;
   -webkit-filter: grayscale(0);
 }
 
-.img-fluid:hover {
+/* .img-fluid:hover {
   transform: scale(1.1);
-}
+} */
 
 /* About Section Styles */
 
@@ -380,5 +380,11 @@ body.dark-mode #darkModeToggle {
   #darkModeToggle
   {
     font-size: 32px;
+  }
+
+  .image:hover {
+    transform: unset;
+    filter: none;
+    -webkit-filter: grayscale(100%);
   }
 }
