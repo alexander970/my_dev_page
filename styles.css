@@ -1,391 +1,436 @@
-/* Global Styles */
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
 
+/* Set a background color and fonts */
 body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+    background-color: #1e1e1e; /* Dark background */
+    font-family: Arial, sans-serif;
+    color: #fff; /* White text */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+/* Header styles with glassmorphism */
+header {
+    background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    color: #ff5733; /* Accent color for header text */
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s; /* Add hover effect */
 }
 
-/* Header Styles */
+/* Apply hover effect on header /* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and fonts */
+body {
+    background-color: #1e1e1e; /* Dark background */
+    font-family: Arial, sans-serif;
+    color: #fff; /* White text */
+}
+
+/* Header styles with glassmorphism */
+header {
+    background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    color: #ff5733; /* Accent color for header text */
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s; /* Add hover effect */
+}
+
+/* Apply hover effect on header */
+header:hover {
+    background-color: rgba(26, 26, 26, 0.8); /* Slightly darker background on hover */
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Navigation menu styles with glassmorphism */
+nav {
+    background-color: rgba(42, 42, 42, 0.9); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s; /* Add hover effect */
+}
+
+/* Apply hover effect on navigation menu */
+nav:hover {
+    background-color: rgba(42, 42, 42, 0.8); /* Slightly darker background on hover */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff5733; /* Hover color */
+}
+
+/* Section styles with glassmorphism */
+.section {
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Apply hover effect on sections */
+.section:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff5733; /* Accent color for section headers */
+}
+
+/* Footer styles with glassmorphism */
+footer {
+    background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s; /* Add hover effect */
+}
+
+/* Apply hover effect on footer */
+footer:hover {
+    background-color: rgba(26, 26, 26, 0.8); /* Slightly darker background on hover */
+}
+
+/* Add hover effect to portfolio container */
+#canvas-container {
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+#canvas-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
 
 header {
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.navbar-nav .nav-link {
-  padding: 10px 15px;
+.header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
-.custom-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
+.smaller-header {
+    height: 50vh; /* Set the header height to 50% of the viewport height */
 }
 
-/* Hero Section Styles */
-
-.hero-section {
-  padding: 100px 0;
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.center-items {
-  text-align: center;
+.header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 10%!important; /* Adjust the margin to center the content vertically */
 }
 
-.hero-section h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.5s; /* Animate text elements */
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  color: #777;
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.img-fluid {
-  max-width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+.cta-button:hover {
+    background-color: #e63c0e; /* Change background color on hover */
 }
 
-.image-container {
-  position: relative;
-  width: 197px;
-  height: 200px;
-  overflow: hidden;
-  margin: 20px;
-
-  border-radius: 50%;
-
+/* Keyframes for text animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.image {
-  position: absolute;
-
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease-in-out;
-  text-align: start !important;
-
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  transition: filter 0.5s ease-in-out
+/* .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-.image:hover {
-  transform: scale(1.1);
-  filter: none;
-  -webkit-filter: grayscale(0);
+.profile-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('me2.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* .img-fluid:hover {
-  transform: scale(1.1);
+.profile-image:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.bio {
+    max-width: 400px;
+    text-align: center;
 } */
 
-/* About Section Styles */
 
-.about-section {
-  padding: 80px 0;
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To position the image and text on opposite sides */
+    gap: 20px;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 30px;
+.profile-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('me2.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d; /* Enable 3D transforms */
 }
 
-.section-content {
-  font-size: 1.1rem;
-  color: #555;
+.profile-image:hover {
+    transform: scale(1.1) perspective(1000px) rotateY(20deg); /* Apply 3D perspective and rotation on hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-/* Skills Section Styles */
-
-.skills-section {
-  padding: 80px 0;
+.bio {
+    flex-grow: 1; /* Allow the bio section to take remaining space */
+    max-width: 60%; /* Adjust the width of the bio section */
+    text-align: center;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
+#about {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 40px; /* Add padding for spacing */
 }
 
-.skill-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
 }
 
-.skill-item {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 20px;
-  min-width: 120px;
-  max-width: 200px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.profile-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('me2.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d; /* Enable 3D transforms */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.skill-item:hover {
-  transform: scale(1.15);
-  cursor: pointer;
+.profile-image:hover {
+    transform: scale(1.05) perspective(1000px) rotateY(10deg); /* Apply 3D perspective and rotation on hover */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
 
-.hero-section p,
-.section-content {
-  color: #554848;
+.bio {
+    max-width: 600px;
 }
 
-.hero-section {
-  background-image: url('img/playa.jpg');
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  color: white !important;
-  height:690px;
+.bio h3 {
+    color: #333; /* Dark text color */
+    font-size: 24px;
 }
 
-.section-header {
-  background-color: #1c1b1b70;
-  border-radius: 16px;
-  color: white !important;
+.bio p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666; /* Slightly darker text color */
 }
 
-.paragraph-header {
-  background-color: #1c1b1b70;
-  border-radius: 16px;
-  color: white !important;
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about-section {
-  background-color: #d3dee1;
+.skill {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-.skills-section {
-  background-color: #9bb2bfa3;
+.progress-bar {
+    background-color: #f3f3f3;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
 }
 
-.csharp {
-  background-color: #976394;
-  color: #fff;
+.progress {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ff5733; /* Accent color */
+    width: 0; /* Initially 0 width, will be animated */
+    transition: width 1s ease-in-out; /* Add animation */
 }
 
-.blazor {
-  background-color: #709c6e;
-  color: #fff;
+/* Animate the progress bars when they come into view */
+.section.active .progress {
+    width: 100%;
 }
 
-.html {
-  background-color: #df6e52;
-  color: #fff;
+/* .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.css {
-  background-color: #627ce4;
-  color: #fff;
+.skill {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative; 
+    cursor: pointer; 
 }
 
-.bootstrap {
-  background-color: #6b5c81;
-  color: #fff;
+.tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
 }
 
-.javascript {
-  background-color: #ece292;
-  color: #000;
+.skill:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+} */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
+.skill {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    display: flex; /* Use flex layout for alignment */
+    justify-content: space-between; /* Place the progress bar and tooltip side by side */
+    align-items: center; /* Vertically center the content */
+    position: relative; /* Position relative for tooltip positioning */
+    cursor: pointer; /* Change cursor on hover */
 }
 
-body.dark-mode .lead,
-body.dark-mode .section-content,
-body.dark-mode .footer-section {
-  color: #ccc5c5;
+.progress-bar {
+    background-color: #f3f3f3;
+    height: 20px;
+    border-radius: 10px;
+    flex-grow: 1; /* Allow the progress bar to grow to fill available space */
+    margin-right: 10px; /* Add some spacing between progress bar and tooltip */
+    margin-left:12px;
 }
 
-body.dark-mode .footer-section p {
-  color: #ccc5c5;
+.tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px); /* Position to the right of the progress bar with spacing */
+    transform: translateY(-50%);
+    width:200px
 }
 
-body.dark-mode .nav-link {
-  color: white;
-}
-
-body.dark-mode .hero-section {
-  background-color: #102035;
-}
-
-body.dark-mode .about-section {
-  background-color: #2e2f2f;
-}
-
-body.dark-mode .skills-section {
-  background-color: #343a3c;
-}
-
-body.dark-mode .csharp {
-  background-color: #9B4F96;
-  color: #fff;
-}
-
-body.dark-mode .blazor {
-  background-color: #5C9E59;
-  color: #fff;
-}
-
-body.dark-mode .html {
-  background-color: #E34C26;
-  color: #fff;
-}
-
-body.dark-mode .css {
-  background-color: #264DE4;
-  color: #fff;
-}
-
-body.dark-mode .bootstrap {
-  background-color: #563D7C;
-  color: #fff;
-}
-
-body.dark-mode .javascript {
-  background-color: #F7DF1E;
-  color: #000;
-}
-
-/* Styles for the dark mode switch */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-  margin-right: 15px;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  border-radius: 25px;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 2.5px;
-  bottom: 2.5px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"]:checked+.slider {
-  background-color: #007bff;
-}
-
-input[type="checkbox"]:checked+.slider:before {
-  transform: translateX(25px);
-  content: "\f3cc"; /* Unicode for filled moon icon */
-}
-
-#darkModeToggle {
-  color: rgb(85, 84, 84);
-  cursor: pointer;
-  font-size: 20px;
-}
-
-body.dark-mode #darkModeToggle {
-  color: rgb(214, 224, 68);
-}
-
-.section-content {
-  text-align: justify;
-}
-
-.leading-paragraph {
-  font-size: 1.5rem;
-}
-
-.lead {
-  height: 61.4333px;
-}
-
-/* Footer Styles */
-
-.footer-section {
-  padding: 20px 0;
-  background-color: #f8f9fa;
-}
-
-.footer-section p {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Media Queries */
-
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .custom-center {
-    align-items: left;
-    justify-content: left;
-  }
-
-  .section-divider {
-    height: 100px;
-    background-position: 350px 230px;
-  }
-  #darkModeToggle
-  {
-    font-size: 32px;
-  }
-
-  .image:hover {
-    transform: unset;
-    filter: none;
-    -webkit-filter: grayscale(100%);
-  }
+.skill:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(calc(100% + 10px)) translateY(-50%);
 }
