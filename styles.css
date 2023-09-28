@@ -424,7 +424,7 @@ header {
     transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
     position: absolute;
     top: 50%;
-    left: calc(100% + 10px); /* Position to the right of the progress bar with spacing */
+    left: calc(60% + 10px); /* Position to the right of the progress bar with spacing */
     transform: translateY(-50%);
     width:200px
 }
@@ -432,5 +432,5 @@ header {
 .skill:hover .tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateX(calc(100% + 10px)) translateY(-50%);
+    transform: translateX(calc(60% + 10px)) translateY(-50%);
 }
