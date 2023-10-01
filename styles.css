@@ -68,6 +68,7 @@ nav {
     padding: 10px 0;
     text-align: center;
     transition: background-color 0.3s; /* Add hover effect */
+    width:100vw;
 }
 
 /* Apply hover effect on navigation menu */
@@ -394,6 +395,7 @@ header {
         left: 0;
         right: 0;
         z-index: 1; /* Ensure it's above other content */
+        width:100vw;
     }
 
     nav ul {
@@ -413,7 +415,7 @@ header {
 
     .header-content
     {
-        margin-top:16% !important;
+        margin-top:44% !important;
     }
 }
 
