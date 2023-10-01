@@ -179,7 +179,7 @@ header {
 
 .header-content {
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
     text-align: center;
     margin-top: 10%!important; /* Adjust the margin to center the content vertically */
 }
