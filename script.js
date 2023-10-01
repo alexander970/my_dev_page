@@ -132,7 +132,7 @@ skills.forEach((skill) => {
 window.addEventListener('resize', () => {
     const newWidth = canvasContainer.clientWidth;
     const newHeight = canvasContainer.clientHeight;
-    renderer.setSize(newWidth, 250);
+    renderer.setSize(newWidth, 300);
 });
 
 // JavaScript for toggling the mobile menu
