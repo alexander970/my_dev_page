@@ -27,14 +27,6 @@ cube.position.set(0, 0, 0); // Set the position to center it
 scene.add(cube);
 
 
-// const cubeSize = 2; // Adjust the size of the cube as needed
-// const cube = new THREE.Mesh(geometry, material);
-// cube.scale.set(cubeSize, cubeSize, cubeSize); // Set the scale to adjust the size
-// cube.position.set(0, 0, 0); // Set the position to center it
-// scene.add(cube);
-
-
-
 
 // Animation function
 const animate = () => {
@@ -125,15 +117,6 @@ const profileImage = document.getElementById('profile-image');
 
         const skills = document.querySelectorAll('.skill');
 
-// skills.forEach((skill) => {
-//     const skillText = skill.querySelector('p').textContent;
-    
-//     const tooltip = document.createElement('div');
-//     tooltip.classList.add('tooltip');
-//     tooltip.textContent = skillText;
-    
-//     skill.appendChild(tooltip);
-// });
 
 
 skills.forEach((skill) => {
@@ -144,4 +127,26 @@ skills.forEach((skill) => {
     tooltip.textContent = tooltipText; // Use the data-tooltip attribute content
     
     skill.appendChild(tooltip);
+});
+
+window.addEventListener('resize', () => {
+    const newWidth = canvasContainer.clientWidth;
+    const newHeight = canvasContainer.clientHeight;
+    renderer.setSize(newWidth, newHeight);
+});
+
+// JavaScript for toggling the mobile menu
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+mobileMenuIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+});
+
+// Close the mobile menu when a menu item is clicked
+const mobileMenuItems = document.querySelectorAll('.mobile-menu a');
+mobileMenuItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+    });
 });

@@ -218,31 +218,6 @@ header {
     }
 }
 
-/* .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.profile-image {
-    width: 200px;
-    height: 200px;
-    background-image: url('me2.jpg');
-    background-size: cover;
-    border-radius: 50%;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.profile-image:hover {
-    transform: scale(1.1); /* Enlarge on hover */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-}
-
-.bio {
-    max-width: 400px;
-    text-align: center;
-} */
 
 
 
@@ -353,40 +328,6 @@ header {
     width: 100%;
 }
 
-/* .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skill {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
-    text-align: left;
-    position: relative; 
-    cursor: pointer; 
-}
-
-.tooltip {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-}
-
-.skill:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(-10px);
-} */
 
 .skills {
     display: flex;
@@ -434,3 +375,193 @@ header {
     visibility: visible;
     transform: translateX(calc(60% + 10px)) translateY(-50%);
 }
+
+/* Smaller header for mobile */
+@media (max-width: 768px) {
+    header {
+        height: 30vh; /* Adjust the header height for mobile */
+    }
+
+    nav {
+        background-color: rgba(42, 42, 42, 0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px 0;
+        text-align: center;
+        transition: background-color 0.3s;
+        position: fixed; /* Fixed position for the navigation menu on mobile */
+        top: 0; /* Position it at the top of the viewport */
+        left: 0;
+        right: 0;
+        z-index: 1; /* Ensure it's above other content */
+    }
+
+    nav ul {
+        flex-direction: column; 
+    }
+
+    nav li {
+        margin-right: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        width: 150px; 
+        height: 150px;
+    }
+
+    .header-content
+    {
+        margin-top:16% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column; 
+    }
+
+    .skill {
+        margin-bottom: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0; 
+    }
+}
+
+
+
+
+/* Mobile menu icon (hamburger) */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color:#ff5733;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+/* Show the menu icon on small screens */
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 2;
+    }
+    nav
+    {
+        height:40px;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -70%; /* Initially off-screen */
+        width: 70%;
+        max-width: 300px;
+        height: 100%;
+        background-color: rgba(42, 42, 42, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+        padding-top: 70px;
+        transition: transform 0.3s, right 0.3s; /* Add right property to control sliding */
+        z-index: 1;
+    }
+
+    .mobile-menu.open {
+        right: 0; /* Slide the menu in on open */
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-menu li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .mobile-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+        color: #ff5733;
+    }
+
+    /* CSS for the mobile menu */
+.mobile-menu {
+    display: none; /* Initially hide the menu */
+    /* Add other styles for the closed menu here */
+}
+
+.mobile-menu.open {
+
+    display: flex;
+    flex-direction: column;
+    height: 233px;
+    margin-top: -12px;
+    text-align: center;
+    width: 100%;
+    max-width: unset;
+    
+
+
+}
+
+.mobile-menu.open ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu.open li {
+    margin: 20px 0;
+}
+
+.mobile-menu.open a {
+    text-decoration: none;
+    font-size: 24px;
+    color:#ff5733;
+    transition: color 0.3s;
+}
+
+.mobile-menu.open a:hover {
+    color: #ff5733; /* Hover color */
+}
+
+.mobile-menu-icon {
+    cursor: pointer;
+}
+
+.mobile-menu.open a:active
+{
+        color:#ff5733 !important;
+
+}
+
+.mobile-menu.open a:focus{
+    color:#ff5733 !important;
+
+}
+
+}
+
+
+    
